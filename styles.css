@@ -1,0 +1,147 @@
+html {
+  background: #e0d3c1; /* Desk color */
+  min-height: 100vh;
+}
+
+body {
+  font-family: "Indie Flower", cursive;
+  background: #ffffeb; /* Notepad color */
+  max-width: 500px;
+  margin: 40px auto;
+  padding: 40px 60px 70px;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+  position: relative;
+  transform: rotate(1deg);
+  min-height: 60vh;
+  background-image: repeating-linear-gradient(
+    to bottom,
+    transparent 0px,
+    transparent 39px,
+    rgba(0, 0, 0, 0.1) 40px
+  ); /* Lined paper effect */
+}
+
+h1 {
+  font-size: 2.8em;
+  margin: 0 0 40px 0;
+  color: #444;
+  text-decoration: underline wavy #ff6b6b;
+}
+
+input[type="text"] {
+  padding: 10px;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.2em;
+  border: 2px dashed #d4a5a5;
+  border-radius: 5px;
+  background: transparent;
+  width: 60%;
+  margin-right: 10px;
+}
+
+button#add {
+  background: #ff6b6b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-family: "Indie Flower", cursive;
+  font-size: 1.2em;
+  border-radius: 5px;
+  cursor: pointer;
+  box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+button#add:hover {
+  transform: scale(1.05);
+}
+
+ul {
+  padding: 20px 0 0 40px;
+  margin: 20px 0;
+  text-align: left;
+}
+
+li {
+  list-style-type: none;
+  margin: 15px 0;
+  padding-left: 35px;
+  position: relative;
+  font-size: 1.3em;
+}
+
+input[type="checkbox"].check {
+  appearance: none;
+  width: 25px;
+  height: 25px;
+  border: 2px solid #666;
+  border-radius: 5px;
+  cursor: pointer;
+  position: absolute;
+  left: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+input[type="checkbox"].check:checked {
+  background: #ff6b6b
+    url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="white" width="18px" height="18px"><path d="M0 0h24v24H0z" fill="none"/><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z"/></svg>')
+    no-repeat center;
+  border-color: #ff6b6b;
+}
+
+i.fa-trash {
+  color: #ff6b6b;
+  margin-left: 15px;
+  transition: all 0.2s;
+  position: absolute;
+  right: -30px;
+}
+
+i.fa-trash:hover {
+  color: #ff5252;
+  transform: scale(1.2);
+}
+
+/* Left red margin line */
+body::before {
+  content: "";
+  position: absolute;
+  left: 20px;
+  top: 0;
+  bottom: 0;
+  width: 3px;
+  background: #ff6b6b;
+  opacity: 0.6;
+}
+
+/* Torn paper effect at bottom */
+body::after {
+  content: "";
+  position: absolute;
+  bottom: -15px;
+  left: 0;
+  right: 0;
+  height: 30px;
+  background: linear-gradient(
+      45deg,
+      transparent 33.33%,
+      #ffffeb 33.33%,
+      #ffffeb 66.66%,
+      transparent 66.66%
+    ),
+    linear-gradient(
+      -45deg,
+      transparent 33.33%,
+      #ffffeb 33.33%,
+      #ffffeb 66.66%,
+      transparent 66.66%
+    );
+  background-size: 20px 60px;
+  background-repeat: repeat-x;
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.7;
+}
